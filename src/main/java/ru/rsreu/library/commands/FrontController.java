@@ -9,18 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- *
- */
 @WebServlet(name = "FrontControllerServlet")
 public class FrontController extends HttpServlet {
 
-    /**
-     * @param req
-     * @param resp
-     * @throws ServletException
-     * @throws IOException
-     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         FrontCommand command = getCommand(req);
