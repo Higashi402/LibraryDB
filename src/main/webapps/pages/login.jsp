@@ -1,41 +1,76 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Авторизация</title>
-
+    <meta charset="UTF-8">
+    <title>Регистрация пользователя</title>
     <style>
-        <jsp:include page="../css/style.css"/>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px #ccc;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
-<div class="header">
-    <div class="container">
-        <div class="header-inner header-inner-auth">
-            <div class="header-title">
-                <div class="header-subtitle">Авторизация</div>
-            </div>
-        </div>
+<h1>Регистрация пользователя</h1>
+<form action="process_registration.jsp" method="post">
+    <div>
+        <label for="login">Логин:</label>
+        <input type="text" id="login" name="login" required>
     </div>
-</div>
-<div class="auth">
-    <div class="container">
-        <form class="auth-inner" action="login" method="post">
-            <div class="auth-block">
-                <div class="auth-block-login">
-                    <div class="auth-login-title"> Логин:</div>
-                    <div><input class="input" type="text" name="login"></div>
-                </div>
-                <div class="auth-block-password">
-                    <div class="auth-password-title"> Пароль:</div>
-                    <div><input class="input" type="password" name="password"></div>
-                </div>
-                <div class="auth-block-button">
-                    <input class="input auth-submit" type="submit" value="Войти"/>
-                </div>
-            </div>
-        </form>
+    <div>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
     </div>
-</div>
+    <div>
+        <input type="submit" value="Войти">
+    </div>
+</form>
 </body>
 </html>
