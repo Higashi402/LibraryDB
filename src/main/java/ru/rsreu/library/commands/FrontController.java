@@ -28,12 +28,6 @@ public class FrontController extends HttpServlet {
         command.process();
     }
 
-    /**
-     * @param req
-     * @param resp
-     * @throws ServletException
-     * @throws IOException
-     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         FrontCommand command = getCommand(req);
@@ -41,10 +35,6 @@ public class FrontController extends HttpServlet {
         command.send();
     }
 
-    /**
-     * @param request
-     * @return
-     */
     private FrontCommand getCommand(HttpServletRequest request) {
         try {
             String str = String.format(
