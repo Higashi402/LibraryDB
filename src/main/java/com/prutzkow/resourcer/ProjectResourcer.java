@@ -1,4 +1,4 @@
-package resourcer;
+package com.prutzkow.resourcer;
 
 import java.util.Locale;
 import java.util.MissingResourceException;
