@@ -24,7 +24,7 @@
             width: 300px;
             margin: 0 auto;
             padding: 20px;
-            box-shadow: 0px 0px 10px 0px #ccc;
+            box-shadow: 0px 0px 100px 0px #ccc;
         }
 
         label {
@@ -37,9 +37,9 @@
         input[type="password"] {
             width: 100%;
             padding: 10px;
-            margin-top: 5px;
+            margin-top: 50px;
             margin-bottom: 10px;
-            border: 1px solid #ccc;
+            border: 11px solid #ccc;
             border-radius: 3px;
         }
 
